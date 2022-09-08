@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="{{ site.data-theme }}">
+
+{% include head.html %}
+
+<body>
+<header class="page-head">
+    <div class="main">
+        <img class="icon" src="{{ site.icon }}" alt="Site Icon">
+        <h3 class="title">
+            {{ site.title }}
+            <small>{{ site.tagline }}</small>
+        </h3>
+        <a class="toggle-theme" onclick="toggleTheme()">
+            <span>Toggle Theme</span>
+            <span class="material-icons play">play_arrow</span>
+        </a>
+    </div>
+    <div class="route">
+        <span class="path">
+            <a class="home" href="/">blog-home</a>
+            {% assign route = page.url | split: "/" %}
+            {% assign preroute = route | pop %}
+            {% for member in preroute %}
+            {% if member != ""%}
+            <small> > </small>{{ member }}
+            {% endif %}
+            {% endfor %}
+            {% if route.size > 0 %}
+            <small> > </small>
+            <span class="markdown">
+                <img src="/assets/images/markdown_icon.png" alt="markdown_icon">
+            </span>
+            {{ route.last }}.md
+            {% endif %}
+        </span>
+        <div class="spacer"></div>
+        <div class="links">
+            {% if page.github %}
+            <div class="vertical-break"></div>
+            <a class="link-item" href="{{ page.github }}" target="_blank">
+                <span>Github:</span>
+                <span class="material-icons link github">arrow_forward</span>
+            </a>
+            {% endif %}
+            {% if page.youtube %}
+            <div class="vertical-break"></div>
+            <a class="link-item" href="{{ page.youtube }}" target="_blank">
+                <span>Youtube:</span>
+                <span class="material-icons link youtube">play_circle</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</header>
+<div class="page-content">
+    <main>
+        {{ content }}
+    </main>
+    <hr>
+    <footer class="footer">
+        <small>
+            &copy;
+            <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
+            <a href="https://github.com/rhedgeco">JetBrains Theme</a> by Ryan Hedgecock.
+        </small>
+        <br>
+        <small>
+            © <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
+            JetBrains s.r.o. JetBrains and the JetBrains logo are registered trademarks of JetBrains s.r.o.</small>
+    </footer>
+</div>
+
+</body>
+</html>

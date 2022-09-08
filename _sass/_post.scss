@@ -1,0 +1,37 @@
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: var(--back-color2);
+}
+
+article.post {
+  > * {
+    margin: 1rem 0;
+  }
+
+  > .post-title {
+    margin-bottom: 0;
+  }
+
+  > .post-date {
+    color: var(--text-light);
+    font-size: 90%;
+  }
+
+  > p > img {
+    max-width: 100%;
+  }
+
+  dl {
+    dt {
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  abbr {
+    font-weight: bold;
+    color: var(--text-strong);
+  }
+}

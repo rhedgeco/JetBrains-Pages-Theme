@@ -1,0 +1,91 @@
+:root {
+  // background colors
+  --back-color: #313335;
+  --back-color2: #3c3f41;
+  --back-color3: #4c5052;
+  --highlight: #ffff002a;
+
+  // text colors
+  --text-color: #a9b7c6;
+  --text-strong: #dddddd;
+  --text-light: #919191;
+  --text-link: #287bde;
+
+  // other colors
+  --red: #c63d2f;
+  --green: #499c54;
+  --blue: #3592c4;
+  --line-break: #5e6060;
+}
+
+[data-theme='light'] {
+  // background colors
+  --back-color: #ffffff;
+  --back-color2: #f2f2f2;
+  --back-color3: #dfdfdf;
+  --highlight: #ffff0088;
+
+  // text colors
+  --text-color: #404040;
+  --text-strong: #000000;
+  --text-light: #6e6e6e;
+  --text-link: #006dcc;
+
+  // other colors
+  --line-break: #d9d9d9;
+}
+
+html {
+  font-family: Segoe UI, monospace;
+  color: var(--text-color);
+  background-color: var(--back-color);
+  scroll-padding-top: 5em;
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+small {
+  color: var(--text-light);
+  font-weight: normal;
+}
+
+mark {
+  background-color: var(--highlight);
+  color: var(--text-color);
+}
+
+abbr[title] {
+  cursor: help;
+  position: relative;
+  text-decoration: underline dotted;
+
+  &:hover::after,
+  &:focus::after {
+    content: attr(title);
+
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: auto;
+    white-space: nowrap;
+
+    /* style tooltip */
+    background-color: var(--code-back);
+    color: var(--text-color);
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+    font-size: 14px;
+    padding: 3px 5px;
+  }
+}

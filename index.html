@@ -1,0 +1,29 @@
+---
+layout: default
+title: Home
+---
+
+<div class="intro">
+    <h1 class="greeting">{{ site.greeting }}</h1>
+    <p class="description">{{ site.description }}</p>
+</div>
+
+<section class="posts">
+    <h2>Recent Blogs<a class="all-blogs" href="blogs-list">View All</a></h2>
+    <div class="recent-blogs">
+        {% for post in site.posts limit:6 %}
+        <a href="{{ post.url }}" class="blog-preview">
+            <div class="thumbnail">
+                {% if post.thumb %}
+                <img src="{{ post.url }}{{ post.thumb }}" alt="{{ post.title }}">
+                {% else %}
+                <img src="assets/images/default-thumbnail.jpg" alt="{{ post.title }}">
+                {% endif %}
+            </div>
+            <h3>{{ post.title }}</h3>
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}
+            </time>
+        </a>
+        {% endfor %}
+    </div>
+</section>

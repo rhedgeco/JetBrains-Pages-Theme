@@ -1,0 +1,22 @@
+# Permalinks
+permalink: /:year/:title/
+
+# Setup
+title: Ryan Hedgecock
+tagline: JetBrains Pages Theme
+icon: /assets/images/icon.png
+greeting: Hi I'm Ryan 👋
+description: >-
+  I made this theme, because I love the look and feel of Intellij code editors! ❤️<br>
+  Have a look around, read about <a href="/about/">this theme</a>, and use the template to create your own!
+data-theme: light # default theme
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Assets
+sass:
+  sass_dir: _sass
+  style: compressed

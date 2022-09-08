@@ -1,0 +1,140 @@
+.page-head {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--line-break);
+  background-color: var(--back-color2);
+  z-index: 9;
+
+  > .main {
+    white-space: nowrap;
+    display: flex;
+    padding: 0.35rem 0.35rem 0.35rem 0.5rem;
+    border-bottom: 1px solid var(--line-break);
+
+    > .icon {
+      height: 1.5rem;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    > .title {
+      margin-left: 0.5rem;
+      margin-top: auto;
+      margin-bottom: auto;
+
+      > a {
+        color: var(--text-strong);
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      > small {
+        font-size: 75%;
+        margin-left: 0.5rem;
+      }
+    }
+
+    > .toggle-theme {
+      position: absolute;
+      right: 0.5rem;
+      top: auto;
+      bottom: auto;
+      width: 6.5rem;
+
+      display: flex;
+      padding: 0 0.2rem 0 0.5rem;
+      color: var(--text-color);
+      border: 1px solid var(--line-break);
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: var(--back-color2);
+      font-size: 0.8rem;
+
+      > * {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      &:hover {
+        background-color: var(--back-color3);
+        text-decoration: none;
+      }
+
+      &:active {
+        background-color: var(--back-color);
+      }
+
+      > .play {
+        color: var(--green);
+        vertical-align: middle;
+      }
+    }
+  }
+
+  > .route {
+    white-space: nowrap;
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    font-size: 90%;
+
+    > .path {
+      margin: auto 0;
+
+      > .home {
+        font-weight: bold;
+        color: var(--text-color);
+      }
+
+      > .markdown > img {
+          transform: translate(0, 2px);
+      }
+    }
+
+    > .spacer {
+      margin-left: auto;
+    }
+
+    > .links {
+      display: flex;
+      position: absolute;
+      right: 0.5rem;
+      top: auto;
+      bottom: auto;
+      background-color: var(--back-color2);
+
+      > .vertical-break {
+        border-right: 1px solid var(--line-break);
+        margin: 0 0.5rem;
+      }
+
+      > .link-item {
+        display: flex;
+        color: var(--text-color);
+
+        > * {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+
+        > .link {
+          font-size: 1rem;
+          margin-left: 0.25rem;
+          text-decoration: none;
+        }
+
+        > .github {
+          color: var(--blue);
+        }
+
+        > .youtube {
+          color: var(--red);
+        }
+      }
+    }
+  }
+}
