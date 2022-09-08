@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Example Content
-github: https://github.com/rhedgeco
+github: https://github.com/rhedgeco/JetBrains-Pages-Theme/blob/main/_posts/2022/example-content/2022-09-07-example-content.md
 youtube: https://www.youtube.com/channel/UCcCFKMokm2UQTQem1GOUOiA
 ---
 

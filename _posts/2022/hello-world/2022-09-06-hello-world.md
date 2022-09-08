@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello World
-github: https://github.com/rhedgeco
+github: https://github.com/rhedgeco/JetBrains-Pages-Theme/blob/main/_posts/2022/hello-world/2022-09-06-hello-world.md
 thumb: thumbnail.png
 ---
 
