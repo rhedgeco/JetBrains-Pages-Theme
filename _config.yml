@@ -8,8 +8,9 @@ icon: /assets/images/icon.png
 greeting: Hi I'm Ryan 👋
 description: >-
   I made this theme, because I love the look and feel of Intellij code editors! ❤️<br>
-  Have a look around, read about <a href="/about/">this theme</a>, and use the template to create your own!
+  Have a look around, and use the template to create your own!
 data-theme: light # default theme
+baseurl: /JetBrains-Pages-Theme # change this to whatever baseurl you have. Could even just be '/'
 
 markdown: kramdown
 kramdown:

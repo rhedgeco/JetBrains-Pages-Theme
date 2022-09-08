@@ -6,7 +6,7 @@
 <body>
 <header class="page-head">
     <div class="main">
-        <img class="icon" src="{{ site.icon }}" alt="Site Icon">
+        <img class="icon" src="{{ site.baseurl }}{{ site.icon }}" alt="Site Icon">
         <h3 class="title">
             {{ site.title }}
             <small>{{ site.tagline }}</small>
@@ -18,7 +18,7 @@
     </div>
     <div class="route">
         <span class="path">
-            <a class="home" href="/">blog-home</a>
+            <a class="home" href="{{ site.baseurl }}/">blog-home</a>
             {% assign route = page.url | split: "/" %}
             {% assign preroute = route | pop %}
             {% for member in preroute %}
@@ -29,7 +29,7 @@
             {% if route.size > 0 %}
             <small> > </small>
             <span class="markdown">
-                <img src="/assets/images/markdown_icon.png" alt="markdown_icon">
+                <img src="{{ site.baseurl }}/assets/images/markdown_icon.png" alt="markdown_icon">
             </span>
             {{ route.last }}.md
             {% endif %}
