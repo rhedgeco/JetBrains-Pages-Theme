@@ -6,11 +6,13 @@
 <body>
 <header class="page-head">
     <div class="main">
-        <img class="icon" src="{{ site.baseurl }}{{ site.icon }}" alt="Site Icon">
-        <h3 class="title">
-            {{ site.title }}
-            <small>{{ site.tagline }}</small>
-        </h3>
+        <div class="title-content">
+            <img class="icon" src="{{ site.baseurl }}{{ site.icon }}" alt="Site Icon">
+            <h3 class="title">
+                {{ site.title }}
+                <small>{{ site.tagline }}</small>
+            </h3>
+        </div>
         <a class="toggle-theme" onclick="toggleTheme()">
             <span>Toggle Theme</span>
             <span class="material-icons play">play_arrow</span>
@@ -23,31 +25,29 @@
             {% assign preroute = route | pop %}
             {% for member in preroute %}
             {% if member != ""%}
-            <small> > </small>{{ member }}
+            <small> > </small>
+            <span>{{ member }}</span>
             {% endif %}
             {% endfor %}
             {% if route.size > 0 %}
             <small> > </small>
-            <span class="markdown">
-                <img src="{{ site.baseurl }}/assets/images/markdown_icon.png" alt="markdown_icon">
-            </span>
-            {{ route.last }}.md
+            <img class="markdown-icon" src="{{ site.baseurl }}/assets/images/markdown_icon.png" alt="markdown_icon">
+            <span>{{ route.last }}.md</span>
             {% endif %}
         </span>
-        <div class="spacer"></div>
         <div class="links">
             {% if page.github %}
             <div class="vertical-break"></div>
             <a class="link-item" href="{{ page.github }}" target="_blank">
                 <span>Github:</span>
-                <span class="material-icons link github">arrow_forward</span>
+                <span class="material-icons link-icon github">arrow_forward</span>
             </a>
             {% endif %}
             {% if page.youtube %}
             <div class="vertical-break"></div>
             <a class="link-item" href="{{ page.youtube }}" target="_blank">
                 <span>Youtube:</span>
-                <span class="material-icons link youtube">play_circle</span>
+                <span class="material-icons link-icon youtube">play_circle</span>
             </a>
             {% endif %}
         </div>

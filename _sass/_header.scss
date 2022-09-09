@@ -7,62 +7,55 @@
   z-index: 9;
 
   > .main {
+    position: relative;
     white-space: nowrap;
-    display: flex;
-    padding: 0.35rem 0.35rem 0.35rem 0.5rem;
     border-bottom: 1px solid var(--line-break);
+    height: 3rem;
 
-    > .icon {
-      height: 1.5rem;
-      margin-top: auto;
-      margin-bottom: auto;
-    }
+    > .title-content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: flex;
 
-    > .title {
-      margin-left: 0.5rem;
-      margin-top: auto;
-      margin-bottom: auto;
-
-      > a {
-        color: var(--text-strong);
-        font-weight: bold;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
+      > .icon {
+        margin: 0.5rem;
       }
 
-      > small {
-        font-size: 75%;
-        margin-left: 0.5rem;
+      > .title {
+        margin: auto 0;
+        font-size: 1.2rem;
+
+        > small {
+          margin-left: 0.25rem;
+          font-size: 0.9rem;
+        }
       }
     }
 
     > .toggle-theme {
+      display: flex;
+      padding: 0.25rem 0.5rem;
+
       position: absolute;
       right: 0.5rem;
-      top: auto;
-      bottom: auto;
-      width: 6.5rem;
+      top: 0.5rem;
+      bottom: 0.5rem;
 
-      display: flex;
-      padding: 0 0.2rem 0 0.5rem;
-      color: var(--text-color);
       border: 1px solid var(--line-break);
-      border-radius: 4px;
-      cursor: pointer;
+      border-radius: 0.25rem;
+
       background-color: var(--back-color2);
-      font-size: 0.8rem;
+      color: var(--text-color);
+      text-decoration: none;
+      cursor: pointer;
 
       > * {
-        margin-top: auto;
-        margin-bottom: auto;
+        margin: auto 0;
       }
 
       &:hover {
         background-color: var(--back-color3);
-        text-decoration: none;
       }
 
       &:active {
@@ -70,68 +63,73 @@
       }
 
       > .play {
+        font-size: 1.4rem;
+        margin-left: 0.25rem;
         color: var(--green);
-        vertical-align: middle;
       }
     }
   }
 
   > .route {
+    position: relative;
     white-space: nowrap;
-    display: flex;
-    padding: 0.25rem 0.5rem;
-    font-size: 90%;
+    height: 2rem;
 
     > .path {
-      margin: auto 0;
+      display: flex;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0.5rem;
+
+      > * {
+        margin: auto 0.25rem auto 0;
+      }
 
       > .home {
-        font-weight: bold;
         color: var(--text-color);
+        font-weight: bold;
       }
 
-      > .markdown > img {
-          transform: translate(0, 2px);
+      > .markdown-icon {
+        height: 1.2rem;
       }
-    }
-
-    > .spacer {
-      margin-left: auto;
     }
 
     > .links {
       display: flex;
       position: absolute;
+      top: 0;
+      bottom: 0;
       right: 0.5rem;
-      top: auto;
-      bottom: auto;
+
       background-color: var(--back-color2);
 
-      > .vertical-break {
+      .vertical-break {
+        margin: 0.25rem 0.5rem;
         border-right: 1px solid var(--line-break);
-        margin: 0 0.5rem;
       }
 
       > .link-item {
+        height: 100%;
         display: flex;
+        text-decoration-color: var(--text-light);
         color: var(--text-color);
 
         > * {
-          margin-top: auto;
-          margin-bottom: auto;
+          margin: auto 0;
         }
 
-        > .link {
-          font-size: 1rem;
-          margin-left: 0.25rem;
-          text-decoration: none;
+        > .link-icon {
+          font-size: 1.4rem;
+          margin-left: 0.5rem;
         }
 
-        > .github {
+        .github {
           color: var(--blue);
         }
 
-        > .youtube {
+        .youtube {
           color: var(--red);
         }
       }
