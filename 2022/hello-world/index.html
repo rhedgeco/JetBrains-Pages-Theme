@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Enable responsiveness on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Create Page Title -->
+    <title>
+        
+        Hello World &middot; Ryan Hedgecock
+        
+    </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/JetBrains-Pages-Theme/main-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/JetBrains-Pages-Theme/assets/favicon.ico">
+    <link rel="shortcut icon" href="/JetBrains-Pages-Theme/assets/favicon.ico">
+
+    <script>
+        const initialTheme = localStorage.getItem('data-theme');
+        const rootDataset = document.documentElement.dataset;
+        rootDataset.theme = initialTheme === 'dark' || initialTheme === 'light' ? initialTheme : light
+
+        function toggleTheme() {
+            const inDarkMode = (rootDataset.theme === 'dark');
+            reloadTheme(!inDarkMode);
+        }
+
+        function reloadTheme(darkMode) {
+            const mode = darkMode ? 'dark' : 'light';
+            rootDataset.theme = mode;
+            localStorage.setItem('data-theme', mode);
+
+            const utterancesFrame = document.getElementsByClassName('utterances-frame')[0];
+            if (utterancesFrame) {
+                utterancesFrame.contentWindow.postMessage({
+                    type: 'set-theme',
+                    theme: 'github-' + mode,
+                }, 'https://utteranc.es');
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+<header class="page-head">
+    <div class="main">
+        <div class="title-content">
+            <img class="icon" src="/JetBrains-Pages-Theme/assets/images/icon.png" alt="Site Icon">
+            <h3 class="title">
+                Ryan Hedgecock
+                <small>JetBrains Pages Theme</small>
+            </h3>
+        </div>
+        <a class="toggle-theme" onclick="toggleTheme()">
+            <span>Toggle Theme</span>
+            <span class="material-icons play">play_arrow</span>
+        </a>
+    </div>
+    <div class="route">
+        <span class="path">
+            <a class="home" href="/JetBrains-Pages-Theme/">blog-home</a>
+            
+            
+            
+            
+            
+            
+            <small> > </small>
+            <span>2022</span>
+            
+            
+            
+            <small> > </small>
+            <img class="markdown-icon" src="/JetBrains-Pages-Theme/assets/images/markdown_icon.png" alt="markdown_icon">
+            <span>hello-world.md</span>
+            
+        </span>
+        <div class="links">
+            
+            <div class="vertical-break"></div>
+            <a class="link-item" href="https://github.com/rhedgeco/JetBrains-Pages-Theme/blob/main/_posts/2022/hello-world/2022-09-06-hello-world.md" target="_blank">
+                <span>Github:</span>
+                <span class="material-icons link-icon github">arrow_forward</span>
+            </a>
+            
+            
+        </div>
+    </div>
+</header>
+<div class="page-content">
+    <main>
+        <article class="post">
+    
+    <div class="thumbnail">
+        <img src="thumbnail.png" alt="thumbnail">
+    </div>
+    
+    <h1 class="post-title">Hello World</h1>
+    <time datetime="2022-09-06T00:00:00+00:00" class="post-date">06 Sep 2022</time>
+    <p>This is a sample blog post with a custom image as a thumbnail.</p>
+
+<p>Any size image will work, but it will always be scaled to fit a 16:9 aspect ratio.</p>
+
+</article>
+
+    </main>
+    <hr>
+    <footer class="footer">
+        <small>
+            &copy;
+            <time datetime="2022-09-09T03:35:56+00:00">2022</time>
+            <a href="https://github.com/rhedgeco">JetBrains Theme</a> by Ryan Hedgecock.
+        </small>
+        <br>
+        <small>
+            © <time datetime="2022-09-09T03:35:56+00:00">2022</time>
+            JetBrains s.r.o. JetBrains and the JetBrains logo are registered trademarks of JetBrains s.r.o.</small>
+    </footer>
+</div>
+
+</body>
+</html>

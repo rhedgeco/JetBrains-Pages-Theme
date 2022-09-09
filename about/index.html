@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Enable responsiveness on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Create Page Title -->
+    <title>
+        
+        About &middot; Ryan Hedgecock
+        
+    </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/JetBrains-Pages-Theme/main-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/JetBrains-Pages-Theme/assets/favicon.ico">
+    <link rel="shortcut icon" href="/JetBrains-Pages-Theme/assets/favicon.ico">
+
+    <script>
+        const initialTheme = localStorage.getItem('data-theme');
+        const rootDataset = document.documentElement.dataset;
+        rootDataset.theme = initialTheme === 'dark' || initialTheme === 'light' ? initialTheme : light
+
+        function toggleTheme() {
+            const inDarkMode = (rootDataset.theme === 'dark');
+            reloadTheme(!inDarkMode);
+        }
+
+        function reloadTheme(darkMode) {
+            const mode = darkMode ? 'dark' : 'light';
+            rootDataset.theme = mode;
+            localStorage.setItem('data-theme', mode);
+
+            const utterancesFrame = document.getElementsByClassName('utterances-frame')[0];
+            if (utterancesFrame) {
+                utterancesFrame.contentWindow.postMessage({
+                    type: 'set-theme',
+                    theme: 'github-' + mode,
+                }, 'https://utteranc.es');
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+<header class="page-head">
+    <div class="main">
+        <div class="title-content">
+            <img class="icon" src="/JetBrains-Pages-Theme/assets/images/icon.png" alt="Site Icon">
+            <h3 class="title">
+                Ryan Hedgecock
+                <small>JetBrains Pages Theme</small>
+            </h3>
+        </div>
+        <a class="toggle-theme" onclick="toggleTheme()">
+            <span>Toggle Theme</span>
+            <span class="material-icons play">play_arrow</span>
+        </a>
+    </div>
+    <div class="route">
+        <span class="path">
+            <a class="home" href="/JetBrains-Pages-Theme/">blog-home</a>
+            
+            
+            
+            
+            
+            
+            <small> > </small>
+            <img class="markdown-icon" src="/JetBrains-Pages-Theme/assets/images/markdown_icon.png" alt="markdown_icon">
+            <span>about.md</span>
+            
+        </span>
+        <div class="links">
+            
+            
+        </div>
+    </div>
+</header>
+<div class="page-content">
+    <main>
+        <article class="page">
+  <h1 class="page-title">About</h1>
+  <p class="message">
+  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+</p>
+
+<p>In the novel, <em>The Strange Case of Dr. Jekyll and Mr. Hyde</em>, Mr. Poole is Dr. Jekyll’s virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It’s made by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+
+<p>There are currently two themes built on Poole:</p>
+
+<ul>
+  <li><a href="http://hyde.getpoole.com">Hyde</a></li>
+  <li><a href="http://lanyon.getpoole.com">Lanyon</a></li>
+</ul>
+
+<p>Learn more and contribute on <a href="https://github.com/poole">GitHub</a>.</p>
+
+<h2 id="setup">Setup</h2>
+
+<p>Some fun facts about the setup of this project include:</p>
+
+<ul>
+  <li>Built for <a href="http://jekyllrb.com">Jekyll</a></li>
+  <li>Developed on GitHub and hosted for free on <a href="https://pages.github.com">GitHub Pages</a></li>
+  <li>Coded with <a href="http://sublimetext.com">Sublime Text 2</a>, an amazing code editor</li>
+  <li>Designed and developed while listening to music like <a href="https://soundcloud.com/maddecent/sets/blood-bros-series">Blood Bros Trilogy</a></li>
+</ul>
+
+<p>Have questions or suggestions? Feel free to <a href="https://github.com/poole/poole/issues/new">open an issue on GitHub</a> or <a href="https://twitter.com/mdo">ask me on Twitter</a>.</p>
+
+<p>Thanks for reading!</p>
+
+</article>
+
+    </main>
+    <hr>
+    <footer class="footer">
+        <small>
+            &copy;
+            <time datetime="2022-09-09T03:35:56+00:00">2022</time>
+            <a href="https://github.com/rhedgeco">JetBrains Theme</a> by Ryan Hedgecock.
+        </small>
+        <br>
+        <small>
+            © <time datetime="2022-09-09T03:35:56+00:00">2022</time>
+            JetBrains s.r.o. JetBrains and the JetBrains logo are registered trademarks of JetBrains s.r.o.</small>
+    </footer>
+</div>
+
+</body>
+</html>
