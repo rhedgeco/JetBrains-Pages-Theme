@@ -11,7 +11,7 @@
 }
 
 code.highlighter-rouge {
-  padding: 0.15rem;
+  padding: 0.075rem;
 }
 
 .highlighter-rouge {
@@ -21,6 +21,7 @@ code.highlighter-rouge {
   border-radius: 0.25rem;
   padding: 1rem;
   overflow: auto;
+  line-height: normal;
 
   .highlight {
     margin: 0;
